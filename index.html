@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang = "pl">
+	<head>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+		<meta http-equiv = "X-UA-Compatible" content = "ie=edge">
+		<title>Gra w miasta</title>
+		<link rel = "stylesheet" href = "./style.css">
+		<!--<link rel = "icon" href = "./favicon.ico" type = "image/x-icon">-->
+	</head>
+	<body>
+	<div id = "zawartosc">
+		<div id = "cel"></div>
+		<div id = "mapa-guziki-wynik">
+			<div id = "mapa">
+				<img src = "pusta.svg" id = "obrazek" draggable = "false"></img>
+				<img src = "pinezka2.svg" id = "pinezka2" draggable = "false"></img>
+				<img src = "pinezka.svg" id = "pinezka" draggable = "false"></img>
+			</div>
+			<div id = "guziki-wynik">
+				<div id = "guziki">
+					<button id = "guzik-rzeki" class = "aktywny">Pokaż rzeki</button>
+					<button id = "guzik-wojewodztwa" class = "aktywny">Pokaż granice województw</button>
+					<button id = "guzik-zatwierdz" class = "aktywny">Zatwierdź</button>
+				</div>
+				<div id = "wynik-div">
+					<span>Wynik: <b id = "wynik">0</b> pkt.</span>
+					<span>Odległość: <b id = "odleglosc">0</b> km</span>
+					<span><a href = "info.html">Jak grać?</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src = "index.js"></script>
+	</body>
+</html>

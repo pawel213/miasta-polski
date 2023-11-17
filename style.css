@@ -1,0 +1,270 @@
+@media (orientation: portrait) {
+/* czyli kiedy wyższy niż szerszy, na telefonach */
+	
+	#obrazek {
+		width: 100%;
+		/* mapa na całą szerokość ekranu, pod spodem reszta */
+	}
+
+	button {
+		height: 6vh;
+	}
+
+
+	body {
+		overflow-x: hidden;
+		/* jak tego nie było, to z jakiegoś powodu wszystko zawsze było za szerokie o parę pikseli,
+		nie wiem, czy to nie przez błąd przeglądarki, bo tak było tylko w tym testerze responsywnego widoku (w sumie wciąż jest),
+		jak po prostu przesuwałem konsolę, żeby zwęzić okno, to działało normalnie, póki co niech tak zostanie*/
+	}
+
+	#zawartosc {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/* wszystko w kolumnie */
+	}
+
+	#mapa-guziki-wynik {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100vw;
+	}
+
+	#obrazek {
+		position: relative;
+		display: inline;
+		/* potrzebne, żeby potem pozycjonować pinezkę wzgldem tego obrazka */
+	}
+
+	#guziki {
+		width: 80vw;
+		margin-bottom: 3vh;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(3, 1fr);
+		grid-row-gap: 2vh;
+		justify-items: center;
+		/* guziki jako grid, ładnie to działa */
+	}
+
+	#cel {
+		height: 10vh;
+		width: 100vw;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		font-size: 7vh;
+		font-family: "Courier New";
+		overflow: auto;
+		white-space: nowrap;
+		flex-wrap: wrap;
+		/* cel jako flex, i żeby miał przewijanie przy za długiej nazwie */
+	}
+
+	#pinezka, #pinezka2 {
+		height: 5vh;
+		z-index: 1;
+		position: absolute;
+		top: 38.5vh;
+		left: 50vw;
+		/* pozycję tego trzeba będzie potem poprawić javascriptem */
+	}
+	
+	/* .aktywny i .nieaktywny regulują kliknięte i niekliknięte guziki podpowiedzi */
+	.aktywny {
+		width: 100%;
+		font-size: 140%;
+		background-color: #2763c4;
+		border: none;
+		border-radius: 1vw;
+		color: #ebeef2;
+	}
+
+	.aktywny:hover {
+		background-color: #033b96;
+	}
+
+	.aktywny:active {
+		color: #141414;
+	}
+
+	.nieaktywny {
+		width: 100%;
+		font-size: 140%;
+		border: none;
+		border-radius: 1vw;
+		background-color: #64686e;
+		color: #292b2e;
+	}
+
+	.aktywny,
+	.nieaktywny {
+		margin-left: 2vw;
+		margin-right: 2vw;
+	}
+
+	#guzik-zatwierdz {
+		background-color: #01ae2f;
+	}
+	
+	/* #wynik-div czyli miejsce na odległość i punkty */
+	#wynik-div {
+		height: 16vh;
+		font-size: 4vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#wynik-div > span {
+		overflow: auto;
+	}
+
+	body {
+		background-color: #2c2e30;
+		color: #ebeef2;
+		font-family: "Courier New";
+	}
+	
+	a, a:visited {
+		color: #75faf8;
+	}
+
+
+}
+
+
+/* ogólnie to w @media powyżej i poniżej mam pewnie sporo powtórzeń, ale nie chce mi się tego już oczyszczać,
+bo włożyłem w tego całego cssa i tak już za dużo czasu i energii */
+
+
+@media (orientation: landscape) {
+/* na komputery */
+
+	body {
+		overflow: hidden;
+		/* jak wyżej */
+	}
+
+	#obrazek {
+		height: 80vh;
+	}
+
+	#mapa-guziki-wynik {
+		display: flex;
+		flex-direction: row;
+		/* mapa-guziki-wynik w rządku, guziki-wynik w kolumnie */
+	}
+
+	#zawartosc {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100vw;
+	}
+
+	#obrazek {
+		position: relative;
+		display: inline;
+	}
+
+	#guziki {
+		height: 40vh;
+		width: 25vw;
+		margin-bottom: 3vh;
+		margin-left: 3vw;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(3, 1fr);
+		grid-row-gap: 2vh;
+		justify-items: center;
+	}
+
+	#cel {
+		height: 10vh;
+		width: 100vw;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		font-size: 5vh;
+		font-family: "Courier New";
+		overflow: auto;
+		white-space: nowrap;
+		flex-wrap: wrap;
+	}
+
+	#pinezka, #pinezka2 {
+		height: 5vh;
+		z-index: 1;
+		position: absolute;
+		top: 38.5vh;
+		left: 50vw;
+	}
+
+	.aktywny {
+		width: 100%;
+		font-size: 4vh;
+		background-color: #2763c4;
+		border: none;
+		border-radius: 1vw;
+		color: #ebeef2;
+	}
+
+	.aktywny:hover {
+		background-color: #033b96;
+	}
+
+	.aktywny:active {
+		color: #141414;
+	}
+
+	.nieaktywny {
+		width: 100%;
+		font-size: 4vh;
+		border: none;
+		border-radius: 1vw;
+		background-color: #64686e;
+		color: #292b2e;
+	}
+
+	.aktywny,
+	.nieaktywny {
+		margin-left: 2vw;
+		margin-right: 2vw;
+	}
+
+	#guzik-zatwierdz {
+		background-color: #01ae2f;
+	}
+
+	#wynik-div {
+		height: 16vh;
+		font-size: 4vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		margin-left: 3vw;
+	}
+
+	#wynik-div > span {
+		overflow-x: hidden;
+		white-space: nowrap;
+	}
+
+	body {
+		background-color: #2c2e30;
+		color: #ebeef2;
+		font-family: "Courier New";
+	}
+	
+	a, a:visited {
+		color: #75faf8;
+	}
+
+}

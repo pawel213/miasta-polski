@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang = "pl">
+	<head>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+		<meta http-equiv = "X-UA-Compatible" content = "ie=edge">
+		<title>Gra w miasta</title>
+		<link rel = "stylesheet" href = "./info.css">
+		<!--<link rel = "icon" href = "./favicon.ico" type = "image/x-icon">-->
+	</head>
+	<body>
+		<div id = "jak-grac-naglowek">Jak grać?</div>
+		<div id = "jak-grac-tresc">
+			Głównym elementem gry jest mapa, nad którą wyświetla się nazwa miasta do wskazania. Po zaznaczeniu jego obstawianej lokalizacji przez kliknięcie i ustawienie czerwonej pinezki, należy zatwierdzić zielonym przyciskiem. Wtedy niebieska pinezka przeskoczy na rzeczywistą lokalizację, licznik odległości pokaże dystans między założeniem i rzeczywistością, a licznik punktów zmieni się o odpowiednią wartość z tabelki poniżej, zależnie od odległości. Kliknięcie niebieskiego guzika odsłoni rzeki albo granice województw, ale będzie kosztować 2 punkty.
+		</div>
+		<div id = "punktacja-naglowek">Punktacja</div>
+		<table id = "punktacja-tresc">
+			<thead>
+				<tr>
+					<td>Odległość</td>
+					<td>Punkty</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>0-30 km</td>
+					<td>10 pkt</td>
+				</tr>
+				<tr>
+					<td>31-70 km</td>
+					<td>8 pkt</td>
+				</tr>
+				<tr>
+					<td>71-120 km</td>
+					<td>5 pkt</td>
+				</tr>
+				<tr>
+					<td>121-200 km</td>
+					<td>2 pkt</td>
+				</tr>
+				<tr>
+					<td>> 200 km</td>
+					<td>0 pkt</td>
+				</tr>
+			</tbody>
+		</table>
+		<div id = "zrodla-naglowek">Źródła</div>
+		<div id = "zrodla-tresc">
+			<ul>
+				<li>Pinezka (czerwona, niebieska jest jej przerobioną wersją) - <a href = "https://commons.wikimedia.org/wiki/File:Map_pin_icon.svg">stąd</a></li>
+			</ul>
+			<ul>
+				<li>Mapa (z wszystkim, wersje bez województw/rzek/obu są moimi przeróbkami) - <a href = "https://commons.wikimedia.org/wiki/File:Poland_adm_location_map.svg">stąd</a></li>
+			</ul>
+			<ul>
+				<li>Lista danych o miastach (do skryptu) - <a href = "https://github.com/ryczek02/Polskie-jednostki-administracyjne">stąd</a></li>
+			</ul>
+		</div>
+		<div id = "powrot"><a href = "index.html">Powrót do strony głównej</a></div>
+	</body>
+</html>
