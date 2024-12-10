@@ -120,10 +120,6 @@
 		align-items: center;
 	}
 
-	#wynik-div > span {
-		overflow: auto;
-	}
-
 	body {
 		background-color: #2c2e30;
 		color: #ebeef2;
@@ -253,7 +249,6 @@ bo włożyłem w tego całego cssa i tak już za dużo czasu i energii */
 	}
 
 	#wynik-div > span {
-		overflow-x: hidden;
 		white-space: nowrap;
 	}
 
